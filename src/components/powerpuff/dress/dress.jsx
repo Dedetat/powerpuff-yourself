@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
-import svg from './dress.svg'
 
 const Dress = ({ style, className, color }) => {
   const classes = classnames(
