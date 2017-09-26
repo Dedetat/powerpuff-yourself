@@ -13,9 +13,12 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "mobx": "^3.3.0",
+    "mobx-state-tree": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "recompose": "^0.25.0"
+    "recompose": "^0.25.0",
+    "remotedev": "^0.2.7"
   },
   "devDependencies": {
     "cross-env": "^5.0.5",
