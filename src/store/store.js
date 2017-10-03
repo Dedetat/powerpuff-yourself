@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 import { types, onPatch } from 'mobx-state-tree'
-import { connectReduxDevtools } from 'mobx-state-tree/middleware/redux'
 import Powerpuff from './powerpuff'
 import Router from './router'
 
@@ -16,7 +15,7 @@ const Store = types
       // reinit
       self.powerpuffs = []
 
-      // fetch (TODO)
+      // fetch
       const powerpuffs = [
         { id: 'powerpuff-1', name: 'Delphine' },
         { id: 'powerpuff-2', name: 'Fabien' },
@@ -41,10 +40,6 @@ export default () => {
     // eslint-disable-next-line no-console
     console.log('[store-patch]', patch)
   })
-
-  // redux-dev-tools
-  // eslint-disable-next-line global-require
-  connectReduxDevtools(require('remotedev'), store)
 
   return store
 }

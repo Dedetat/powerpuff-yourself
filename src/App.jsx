@@ -1,16 +1,18 @@
 import React from 'react'
+import { Provider } from 'mobx-react'
 import Screens from './screens'
+import createStore from './store'
 import './App.css'
 
-import store from './store'
-
-const test = store()
-test.fetch()
+const store = createStore()
+store.fetch()
 
 export default () => (
-  <div className="app">
-    <h1>Powerpuff yourself</h1>
+  <Provider store={store}>
+    <div className="app">
+      <h1>Powerpuff yourself</h1>
 
-    <Screens />
-  </div>
+      <Screens />
+    </div>
+  </Provider>
 )
