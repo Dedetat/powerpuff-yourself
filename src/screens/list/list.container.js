@@ -1,5 +1,5 @@
 import { compose } from 'recompose'
-import { inject, observer } from 'mobx-react'
+import { inject, observer } from 'mobx-react'
 import List from './list'
 
 export default compose(

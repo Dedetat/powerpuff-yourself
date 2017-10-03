@@ -17,8 +17,24 @@ const Store = types
 
       // fetch
       const powerpuffs = [
-        { id: 'powerpuff-1', name: 'Delphine' },
-        { id: 'powerpuff-2', name: 'Fabien' },
+        {
+          id: 'powerpuff-1',
+          name: 'Delphine',
+          style: {
+            eye: { color: 'green' },
+            dress: { color: 'green' },
+            hair: { color: 'green', type: 0 },
+          },
+        },
+        {
+          id: 'powerpuff-2',
+          name: 'Fabien',
+          style: {
+            eye: { color: 'red' },
+            dress: { color: 'red' },
+            hair: { color: 'red', type: 1 },
+          },
+        },
       ]
 
       // save

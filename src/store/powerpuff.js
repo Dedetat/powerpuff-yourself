@@ -1,8 +1,16 @@
 import { types } from 'mobx-state-tree'
 
+export const ColorType = types
+  .model({
+    color: 'grey',
+    type: 1,
+  })
+
 export const Style = types
   .model({
-    eye: 'eye',
+    eye: ColorType,
+    dress: ColorType,
+    hair: ColorType,
   })
 
 const Powerpuff = types
