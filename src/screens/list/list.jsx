@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { PropTypes as MobxPropTypes } from 'mobx-react'
 import classnames from 'classnames'
 import Add from './add'
 import Powerpuff from './powerpuff'
@@ -25,7 +26,9 @@ const List = ({ style, className, powerpuffs }) => {
 List.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
-  powerpuffs: PropTypes.arrayOf(PropTypes.object),
+  powerpuffs: MobxPropTypes.observableArrayOf(PropTypes.shape({
+    id: PropTypes.string,
+  })),
 }
 
 List.defaultProps = {
