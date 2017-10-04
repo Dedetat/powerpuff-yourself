@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
 import Add from './add'
 import Powerpuff from './powerpuff'
@@ -35,4 +34,4 @@ List.defaultProps = {
   powerpuffs: [],
 }
 
-export default onlyUpdateForPropTypes(List)
+export default List
