@@ -27,7 +27,7 @@ const powerpuffs = [
   },
 ]
 
-app.use(static(__dirname + '/../../build'))
+app.use(static(__dirname + '/../build'))
 app.use(bodyParser())
 app.use(async (ctx) => {
   if (!ctx.path.includes('/api')) return

@@ -9,7 +9,7 @@
     "lint:js": "eslint --ext js,jsx src",
     "test": "react-scripts test --env=jsdom",
     "start": "cross-env BROWSER=none react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && mv build api/build/",
     "eject": "react-scripts eject"
   },
   "dependencies": {
