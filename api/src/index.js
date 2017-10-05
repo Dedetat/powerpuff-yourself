@@ -1,6 +1,6 @@
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
-const static = require('koa-static')
+const serveStatic = require('koa-static')
 
 const PORT = process.env.PORT || 4000
 const app = new Koa()
@@ -27,7 +27,7 @@ const powerpuffs = [
   },
 ]
 
-app.use(static(__dirname + '/../build'))
+app.use(serverStatic(__dirname + '/../build'))
 app.use(bodyParser())
 app.use(async (ctx) => {
   if (!ctx.path.includes('/api')) return
