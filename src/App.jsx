@@ -7,7 +7,7 @@ import './App.css'
 export default () => (
   <Provider store={createStore()}>
     <div className="app">
-      <h1>Powerpuff yourself</h1>
+      <h1>Pimp my Powerpuff</h1>
 
       <Screens />
     </div>
