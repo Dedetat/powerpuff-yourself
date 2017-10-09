@@ -45,7 +45,6 @@ Powerpuff.defaultProps = {
   className: '',
   name: undefined,
   onClick: undefined,
-  onOver: undefined,
   id: undefined,
 }
 
