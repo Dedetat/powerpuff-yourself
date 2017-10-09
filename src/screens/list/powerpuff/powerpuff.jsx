@@ -14,8 +14,7 @@ const Powerpuff = ({ style, className, name, id, onClick }) => {
 
   return (
     <Card style={style} className={classes} onClick={onClick}>
-      {name}
-
+      <div className="item-name">{name}</div>
       <div className="item-powerpuff-container">
         <PowerpuffStylizer id={id} className="item-powerpuff-stylizer" />
       </div>
@@ -29,6 +28,7 @@ Powerpuff.propTypes = {
   name: PropTypes.string,
   id: PropTypes.string,
   onClick: PropTypes.func,
+  onOver: PropTypes.func,
 }
 
 Powerpuff.defaultProps = {
@@ -36,6 +36,7 @@ Powerpuff.defaultProps = {
   className: '',
   name: undefined,
   onClick: undefined,
+  onOver: undefined,
   id: undefined,
 }
 
