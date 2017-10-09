@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   padding: 2em;
   height: calc(100% - 8em);
-  background-color: #ffeaea;
+  /* background-color: #ffeaea; */
 }
 
 .list > div {
