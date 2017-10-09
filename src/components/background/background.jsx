@@ -6,7 +6,7 @@ const Background = () => {
   return (
     <div className="background">
       <div className="background__shape-container">
-        <svg x="0px" y="0px" viewBox="0 0 900 700" width="20vw">
+        <svg x="0px" y="0px" viewBox="0 0 900 700" className="background__shape--medium">
           <path
             fill="#ffeaea"
             transform="rotate(0, 450, 390)"
@@ -15,7 +15,7 @@ const Background = () => {
         </svg>
       </div>
       <div className="background__shape-container">
-        <svg x="0px" y="0px" viewBox="0 0 900 700" width="80vw">
+        <svg x="0px" y="0px" viewBox="0 0 900 700" className="background__shape--large">
           <path
             fill="#ffeaea"
             transform="rotate(0, 450, 390)"
@@ -24,7 +24,7 @@ const Background = () => {
         </svg>
       </div>
       <div className="background__shape-container">
-        <svg x="0px" y="0px" viewBox="0 0 900 700" width="20vw">
+        <svg x="0px" y="0px" viewBox="0 0 900 700" className="background__shape--medium">
           <path
             fill="#ffeaea"
             transform="rotate(0, 450, 390)"
@@ -33,7 +33,7 @@ const Background = () => {
         </svg>
       </div>
       <div className="background__shape-container">
-        <svg x="0px" y="0px" viewBox="0 0 900 700" width="10vw">
+        <svg x="0px" y="0px" viewBox="0 0 900 700" className="background__shape--small">
           <path
             fill="#ffeaea"
             transform="rotate(0, 450, 390)"
