@@ -5,8 +5,6 @@
   border: 1em solid transparent;
   background-color: rgba(255, 255, 255, 0.8);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.card:hover {
-  border-color: #D27E7E;
+  display: flex;
+  justify-content: center;
 }

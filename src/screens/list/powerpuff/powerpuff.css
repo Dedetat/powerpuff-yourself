@@ -5,6 +5,7 @@
 .item-powerpuff-container {
   position: absolute;
   left: -1em;
+  top: calc(2em + 0.6em * 2 + 2em)
 }
 
 .item-powerpuff-stylizer {
@@ -17,4 +18,28 @@
   font-size: 2em;
   text-transform: uppercase;
   font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
 }
+
+.item-name__button {
+  margin-top: .5em;
+  background-color: #ffeaea;
+  color: #D27E7E;
+  border-radius: 100%;
+  padding: .6em .7em;
+}
+
+.item-name__button:hover {
+  background-color: rgba(95, 197, 238, 0.8);
+  color: #ffffff;
+}
+
+.item-name__button:active {
+  background-color: #ffeaea;
+  color: #D27E7E;
+}
+
+

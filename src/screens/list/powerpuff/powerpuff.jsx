@@ -13,8 +13,17 @@ const Powerpuff = ({ style, className, name, id, onClick }) => {
   )
 
   return (
-    <Card style={style} className={classes} onClick={onClick}>
-      <div className="item-name">{name}</div>
+    <Card style={style} className={classes}>
+      <div className="item-name">
+        <div>{name}</div>
+        <span
+          onClick={onClick}
+          className="item-name__button"
+          role="img"
+          aria-label="growing-heart"
+          title="✨ randomize ✨"
+        >💗</span>
+      </div>
       <div className="item-powerpuff-container">
         <PowerpuffStylizer id={id} className="item-powerpuff-stylizer" />
       </div>
@@ -28,7 +37,6 @@ Powerpuff.propTypes = {
   name: PropTypes.string,
   id: PropTypes.string,
   onClick: PropTypes.func,
-  onOver: PropTypes.func,
 }
 
 Powerpuff.defaultProps = {
