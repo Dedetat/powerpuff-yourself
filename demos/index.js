@@ -1,6 +1,6 @@
 const { isString, capitalize } = require('lodash')
 const differenceInCalendarYears = require('date-fns/difference_in_calendar_years')
-const { types } = require('mobx-state-tree')
+const { types, onPatch } = require('mobx-state-tree')
 
 const Powerpuff = types
   .model({
@@ -34,10 +34,20 @@ const Powerpuff = types
     )
   })
 
-const powerpuff = Powerpuff.create('Aggressive rebelle')
+const Store = types
+  .model({
+    powerpuffs: types.optional(types.array(Powerpuff), []),
+  })
+  .actions(self => ({
+    addPowerpuff: (powerpuff) => { self.powerpuffs.push(powerpuff) },
+  }))
 
-// does print the age (direct access to the view)
-console.log(`${powerpuff.name} is ${powerpuff.age} years old :)`)
+const store = Store.create()
+console.log(JSON.stringify(store.toJSON(), null, 2))
 
-// doesnt print the age since this not a snapshot value
-console.log(JSON.stringify(powerpuff.toJSON(), null, 2))
+store.addPowerpuff('Aggressive rebelle')
+store.addPowerpuff({ name: 'Belle', mood: 'happy' })
+console.log(JSON.stringify(store.toJSON(), null, 2))
+
+store.powerpuffs[0].setMood('happy')
+console.log(JSON.stringify(store.toJSON(), null, 2))
