@@ -1,3 +1,4 @@
+const { isString } = require('lodash')
 const differenceInCalendarYears = require('date-fns/difference_in_calendar_years')
 const { types } = require('mobx-state-tree')
 
@@ -15,9 +16,22 @@ const Powerpuff = types
       return differenceInCalendarYears(new Date(), self.birthday)
     },
   }))
+  .preProcessSnapshot((snapshot) => {
+    if (!isString(snapshot)) return snapshot
 
-const powerpuff = Powerpuff.create({ name: 'Rebelle', mood: 'aggressive' })
-powerpuff.setMood('happy')
+    const [mood, name] = snapshot.split(' ')
+
+    return Object.assign(
+      {},
+      snapshot,
+      {
+        name,
+        mood,
+      },
+    )
+  })
+
+const powerpuff = Powerpuff.create('Aggressive rebelle')
 
 // does print the age (direct access to the view)
 console.log(`${powerpuff.name} is ${powerpuff.age} years old :)`)
