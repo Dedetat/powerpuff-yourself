@@ -1,7 +1,6 @@
 .card {
   width: 20em;
   height: 25em;
-  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.4);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   display: flex;

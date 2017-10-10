@@ -30,11 +30,14 @@
 }
 
 .item-name__button {
+  cursor: pointer;
   margin-top: .5em;
   background-color: #ffeaea;
   color: #D27E7E;
   border-radius: 100%;
   padding: .6em .7em;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .item-name__button:hover {
