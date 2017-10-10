@@ -1,3 +1,8 @@
+.item-container {
+  border: 1em solid rgba(210, 126, 126, 0.5);
+  border-style: double;
+}
+
 .item-powerpuff-card {
   position: relative;
 }

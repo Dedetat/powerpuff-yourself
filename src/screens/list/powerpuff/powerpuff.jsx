@@ -14,21 +14,23 @@ const Powerpuff = ({ style, className, name, id, onClick }) => {
   )
 
   return (
-    <Card style={style} className={classes}>
-      <div className="item-name">
-        <div>{name}</div>
-        <span
-          onClick={onClick}
-          className="item-name__button"
-          role="img"
-          aria-label="growing-heart"
-          title="✨ randomize ✨"
-        >💗</span>
-      </div>
-      <div className="item-powerpuff-container">
-        <PowerpuffStylizer id={id} className="item-powerpuff-stylizer" />
-      </div>
-    </Card>
+    <div className="item-container">
+      <Card style={style} className={classes}>
+        <div className="item-name">
+          <div>{name}</div>
+          <span
+            onClick={onClick}
+            className="item-name__button"
+            role="img"
+            aria-label="growing-heart"
+            title="✨ randomize ✨"
+          >💗</span>
+        </div>
+        <div className="item-powerpuff-container">
+          <PowerpuffStylizer id={id} className="item-powerpuff-stylizer" />
+        </div>
+      </Card>
+    </div>
   )
 }
 
