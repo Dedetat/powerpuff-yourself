@@ -39,4 +39,28 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
 
 ## Livecoding
 ### Model
-###
+> This is about creating our first model
+
+#### [#12](https://github.com/Dedetat/powerpuff-yourself/pull/12/files) - Create the first model and instanciate it
+> Write our first model about a **Powerpuff**, we can call it `Powerpuff` (damn, clever)
+ 1. We import `types` from `mobx-state-tree`, this is the most common used API
+ 2. `types` is used to ... types fields 👌, we can already use it to describe models ! And  `types.model` is the way to go !
+ 3. Here we create a model with only one field, a `name` which is a string !
+ 4. Ok, let's instanciate our model with `Powerpuff.create({})`
+    - `Powerpuff` is our model
+    - `create` means we instanciate a new tree, a new instance
+    - `{}` is the snapshot, the raw data, to use to instanciate a new powerpuff !
+ 5. Let's print it with a `console.log` !
+    - You can see we use `powerpuff.toJSON()` to convert our tree to a snapshot.
+ 6. 🤔 oups, it doesn't work at all ! This is because, by default, a type is required.
+ 7. Let's instanciate our powerpuff, it will be... hm... `Rebelle` (this is Blossum in french, sorry)
+ 8. Print it
+ 9. it works :tada:
+
+
+### Actions
+### Views
+### Lifecycle
+### Nested models
+### References & Identifiers
+### Utils
