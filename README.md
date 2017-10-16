@@ -26,7 +26,7 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
 > This is about creating our first model
 
 #### [#12](https://github.com/Dedetat/powerpuff-yourself/pull/12/files) - Create the first model and instanciate it
-> Write our first model about a **Powerpuff**, we can call it `Powerpuff` (damn, clever)
+> Write our first model of **Powerpuff**, we can call it `Powerpuff` (damn, clever)
  1. We import `types` from `mobx-state-tree`, this is the most common used API
  2. `types` is used to ... type fields 👌, we can already use it to describe models ! And  `types.model` is the way to go !
  3. Here we create a model with only one field, a `name` which is a string !
