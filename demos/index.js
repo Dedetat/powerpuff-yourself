@@ -6,9 +6,9 @@ const Powerpuff = types
     mood: types.enumeration(['happy', 'aggressive']),
   })
 
-const powerpuff = Powerpuff.create({ name: 'Rebelle', mood: 'aggressive' })
+const rebelle = Powerpuff.create({ name: 'Rebelle', mood: 'aggressive' })
 
 // /!\ doesn't work since we don't use an action to mutate the model
-// powerpuff.name = 'Belle'
+// rebelle.mood = 'happy'
 
-console.log(JSON.stringify(powerpuff.toJSON(), null, 2))
+console.log(JSON.stringify(rebelle.toJSON(), null, 2))
