@@ -40,6 +40,19 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
  8. Print it
  9. It works 🎉
 
+#### [#31](https://github.com/Dedetat/powerpuff-yourself/pull/31/files) - Avoid required fields
+> Sometimes we don't want fields to be required
+ 1. To do so, we can use the type `maybe`, which sets the field to `null` if it's not defined
+ 2. So now, when we instanciate our powerpuff with an empty snapshot, it works !
+ 3. And if we want to instanciate the model with a valued name, we still can do it 👍
+
+#### [#32](https://github.com/Dedetat/powerpuff-yourself/pull/32/files) - Avoid required fields
+> There are lots of available types provided by mobx-state-tree, find the entire list in the [documentation](https://github.com/mobxjs/mobx-state-tree#types-overview)
+ 1. Because a Powerpuff is not only a name but also has feelings, we add the field `mood` to describe her
+ 2. But each Powerpuff has her own personality so let's say she must be into a mood defined in an enumeration
+ 3. If you try to create a Powerpuff with a mood which is not in the enumeration, it fails (Don't try to counterfeit a Powerpuff 💪)
+ 4. Use a mood of the enumeration and now you can instanciate a new Powerpuff !
+
 ### Actions
 ### Views
 ### Lifecycle
