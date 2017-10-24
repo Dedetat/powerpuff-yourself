@@ -46,15 +46,30 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
  2. So now, when we instanciate our powerpuff with an empty snapshot, it works !
  3. And if we want to instanciate the model with a valued name, we still can do it 👍
 
-#### [#32](https://github.com/Dedetat/powerpuff-yourself/pull/32/files) - Avoid required fields
+#### [#32](https://github.com/Dedetat/powerpuff-yourself/pull/32/files) - Use more complex types
 > There are lots of available types provided by mobx-state-tree, find the entire list in the [documentation](https://github.com/mobxjs/mobx-state-tree#types-overview)
  1. Because a Powerpuff is not only a name but also has feelings, we add the field `mood` to describe her
  2. But each Powerpuff has her own personality so let's say she must be into a mood defined in an enumeration
  3. If you try to create a Powerpuff with a mood which is not in the enumeration, it fails (Don't try to counterfeit a Powerpuff 💪)
  4. Use a mood of the enumeration and now you can instanciate a new Powerpuff !
 
+
 ### Actions
-### Views
+> This is how we update our model
+
+#### [#33](https://github.com/Dedetat/powerpuff-yourself/pull/33/files) - Updating the model, the natural way
+> As you must be aware, Buttercup is more `aggressive` rather than `happy`. But the powerpuff is now instanciated, the damage is done. The unique solution to repair this mistake is to modify the instance.
+ 1. The natural way would be to set directly the `mood` attribute of the instance
+ 2. As you can guess, it crashes 💥
+
+#### [#34](https://github.com/Dedetat/powerpuff-yourself/pull/34/files) - Updating the model, mobx-state-tree way
+> To mutate the model, mobx-state-tree wants you to create an action. That way the immutability of the state is kept 💖
+ 1. Describe the action within the function `types.actions`
+ 2. Actions take `self` as parameter, it represents the instance itself. They return an object of functions updating the state.
+ 3. Here our action is very simple : we set the `mood` field of the instance with the given `mood`
+ 4. Use this action to modify the instance, it works 🎉
+
+
 ### Lifecycle
 ### Nested models
 ### References & Identifiers
