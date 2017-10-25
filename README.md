@@ -71,7 +71,7 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
 
 
 ### Views
-> It can be handy to have functions that return values deduced from attributes. This is what we call views.
+> There are functions that return values deduced from attributes. This is what we call views.
 
 #### [#35](https://github.com/Dedetat/powerpuff-yourself/pull/35/files) - Create a view
 > Do you know how old is our Powerpuffs now ?
@@ -84,6 +84,24 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
 
 
 ### Lifecycle
+> It can be handy to do some treatments during the model lifecycle. mobx-state-tree exposes lifecycle hooks that you can find in the [documentation](https://github.com/mobxjs/mobx-state-tree#lifecycle-hooks-for-typesmodel)
+
+#### [#36](https://github.com/Dedetat/powerpuff-yourself/pull/36/files) - PreProcessSnapshot
+> Instead of injecting a snapshot to create a new Powerpuff, we want to use a string describing her.
+ 1. `preProcessSnapshot` is called before the model instanciation 💁‍♀️
+ 2. It takes the snapshot given to create the instance and returns a new snapshot matching the model
+ 3. Here we test if the given snapshot is a string
+ 4. If no, we assume it's a well formed snapshot and return it
+ 5. If yes, we extract the mood and the name and create a new object with this attributes
+ 6. We can now use a sentence to instanciate our powerpuff, far much simpler ✨
+
+#### [#37](https://github.com/Dedetat/powerpuff-yourself/pull/37/files) - afterCreate
+> Say that we want to capitalize the name given to a Powerpuff (yes everybody can be mistaken, even better ones 😉)
+ 1. `afterCreate` is called after the model instanciation 💁‍♂️
+ 2. It should be defined as actions to access the `self` of the instance
+ 3. Here we simply capitalize the name and the job is done 🙌
+
+
 ### Nested models
 ### References & Identifiers
 ### Utils
