@@ -40,16 +40,16 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
  8. Print it
  9. It works 🎉
 
-#### [#31](https://github.com/Dedetat/powerpuff-yourself/pull/31/files) - Avoid required fields
-> Sometimes we don't want fields to be required
+#### [#31](https://github.com/Dedetat/powerpuff-yourself/pull/31/files) - Make fields optional
+> Sometimes we don't want fields to be required at creation
  1. To do so, we can use the type `maybe`, which sets the field to `null` if it's not defined
  2. So now, when we instanciate our powerpuff with an empty snapshot, it works !
  3. And if we want to instanciate the model with a valued name, we still can do it 👍
 
 #### [#32](https://github.com/Dedetat/powerpuff-yourself/pull/32/files) - Use more complex types
 > There are lots of available types provided by mobx-state-tree, find the entire list in the [documentation](https://github.com/mobxjs/mobx-state-tree#types-overview)
- 1. Because a Powerpuff is not only a name but also has feelings, we add the field `mood` to describe her
- 2. But each Powerpuff has her own personality so let's say she must be into a mood defined in an enumeration
+ 1. Because a Powerpuff is not only a name but also has feelings 😡😊, we add the field `mood` to describe her
+ 2. Powerpuffs' personalities are simple thus possibilities are limited. Let's use an enumeration to define them
  3. If you try to create a Powerpuff with a mood which is not in the enumeration, it fails (Don't try to counterfeit a Powerpuff 💪)
  4. Use a mood of the enumeration and now you can instanciate a new Powerpuff !
 
@@ -63,9 +63,9 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
  2. As you can guess, it crashes 💥
 
 #### [#34](https://github.com/Dedetat/powerpuff-yourself/pull/34/files) - Updating the model, mobx-state-tree way
-> To mutate the model, mobx-state-tree wants you to create an action. That way the immutability of the state is kept 💖
- 1. Describe the action within the function `types.actions`
- 2. Actions take `self` as parameter, it represents the instance itself. They return an object of functions updating the state
+> To mutate the model, mobx-state-tree wants you to create an action. That way mobx-state-tree can create snapshots and the immutability of the state is kept 💖
+ 1. Describe the action within the function `actions` called on the model
+ 2. We give a callback to `actions` function. This callback takes `self` as parameter, it represents the instance itself. The function returns an object of defined actions
  3. Here our action is very simple : we set the `mood` field of the instance with the given `mood`
  4. Use this action to modify the instance, it works 🎉
 
@@ -76,9 +76,9 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
 #### [#35](https://github.com/Dedetat/powerpuff-yourself/pull/35/files) - Create a view
 > Do you know how old is our Powerpuffs now ?
  1. The best way to know is to add a `birthday` field to our model and then deduce the age from it 💡
- 2. Btw, you can assign a value to a field when you create the model 👍
- 3. Now we can create a view which computes the actual age of our powerpuff. Use `types.views` to describe it
- 4. Like actions, views take `self` as parameter and return an object of functions computing results
+ 2. Btw, you can assign a value to a field when you create the model and mobx-state-tree will deduct the types like a grown up 👍
+ 3. Now we can create a view which computes the actual age of our powerpuff. Use the function `views` on the model to describe it
+ 4. Like actions, views is given a callback which takes `self` as parameter and return an object of functions computing results
  5. Here we write a simple getter to have the current age of the powerpuff and use it like an attribute
  6. Calling this view on the instance gives us the current age of the powerpuff 🎉
 
@@ -92,7 +92,7 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
  2. It takes the snapshot given to create the instance and returns a new snapshot matching the model
  3. Here we test if the given snapshot is a string
  4. If no, we assume it's a well formed snapshot and return it
- 5. If yes, we extract the mood and the name and create a new object with this attributes
+ 5. If yes, we extract the mood and the name and create a new object with this attributes matching the targeted model
  6. We can now use a sentence to instanciate our powerpuff, far much simpler ✨
 
 #### [#37](https://github.com/Dedetat/powerpuff-yourself/pull/37/files) - afterCreate
