@@ -65,9 +65,22 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
 #### [#34](https://github.com/Dedetat/powerpuff-yourself/pull/34/files) - Updating the model, mobx-state-tree way
 > To mutate the model, mobx-state-tree wants you to create an action. That way the immutability of the state is kept 💖
  1. Describe the action within the function `types.actions`
- 2. Actions take `self` as parameter, it represents the instance itself. They return an object of functions updating the state.
+ 2. Actions take `self` as parameter, it represents the instance itself. They return an object of functions updating the state
  3. Here our action is very simple : we set the `mood` field of the instance with the given `mood`
  4. Use this action to modify the instance, it works 🎉
+
+
+### Views
+> It can be handy to have functions that return values deduced from attributes. This is what we call views.
+
+#### [#35](https://github.com/Dedetat/powerpuff-yourself/pull/35/files) - Create a view
+> Do you know how old is our Powerpuffs now ?
+ 1. The best way to know is to add a `birthday` field to our model and then deduce the age from it 💡
+ 2. Btw, you can assign a value to a field when you create the model 👍
+ 3. Now we can create a view which computes the actual age of our powerpuff. Use `types.views` to describe it
+ 4. Like actions, views take `self` as parameter and return an object of functions computing results
+ 5. Here we write a simple getter to have the current age of the powerpuff and use it like an attribute
+ 6. Calling this view on the instance gives us the current age of the powerpuff 🎉
 
 
 ### Lifecycle
