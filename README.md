@@ -81,10 +81,11 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
  4. Like actions, views is given a callback which takes `self` as parameter and return an object of functions computing results
  5. Here we write a simple getter to have the current age of the powerpuff and use it like an attribute
  6. Calling this view on the instance gives us the current age of the powerpuff 🎉
+ 7. Note that when we print the powerpuff, her age isn't part of the snapshot but it's memoized by mobx-state-tree
 
 
 ### Lifecycle
-> It can be handy to do some treatments during the model lifecycle. mobx-state-tree exposes lifecycle hooks that you can find in the [documentation](https://github.com/mobxjs/mobx-state-tree#lifecycle-hooks-for-typesmodel)
+> It can be handy to do some computing during the model lifecycle. mobx-state-tree exposes lifecycle hooks that you can find in the [documentation](https://github.com/mobxjs/mobx-state-tree#lifecycle-hooks-for-typesmodel)
 
 #### [#36](https://github.com/Dedetat/powerpuff-yourself/pull/36/files) - PreProcessSnapshot
 > Instead of injecting a snapshot to create a new Powerpuff, we want to use a string describing her.
