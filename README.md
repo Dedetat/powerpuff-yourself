@@ -12,7 +12,7 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
  - Fabien JUIF [ [Twitter](https://twitter.com/fabienjuif) | [Github](https://github.com/fabienjuif) ]
 
 ## Deck
- - Comming soon
+ - [French version](https://docs.google.com/presentation/d/1GoHkiHX7LgyHSp-Y7EWH_Rpb6s4m1Sbl593YKGG89Co/edit?usp=sharing)
 
 ## Videos
  - Comming soon
