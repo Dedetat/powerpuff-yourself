@@ -97,23 +97,23 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
  6. We can now use a sentence to instanciate our powerpuff, far much simpler ✨
 
 #### [#37](https://github.com/Dedetat/powerpuff-yourself/pull/37/files) - afterCreate
-> Say we want to capitalize the name given to a Powerpuff (yes everybody can be mistaken, even better ones 😉)
+> Say we want Powerpuff's name to be always capitalized (it happens to forget to do it at instanciation, yes everybody can be mistaken, even better ones 😉)
  1. `afterCreate` is called after the model instanciation 💁‍♂️
  2. It should be defined as actions to access the `self` of the instance
  3. Here we simply capitalize the name and the job is done 🙌
 
 
 ### Nested models
-> With mobx-state-tree, it's possible to define models that depends on another
+> With mobx-state-tree, it's possible to define models that depends on others
 
 #### [#38](https://github.com/Dedetat/powerpuff-yourself/pull/38/files) - Nest models
 > Now it's easy to create a Powerpuff, they are spreading and it's becoming a mess ! Let's create a store to bring back some order
- 1. We create a new model of **Store**, called `Store` (yeah, still clever 🤓)
- 2. This model has a list of powerpuff as attribute, its type is an array of Powerpuff
- 3. You can notice we introduced a new type : `optional`. It's like `maybe` but you can define the default value. Here we want an empty list of powerpuff if a Store is not given a snapshot
+ 1. We create a new model, which will be our centralized **Store**, called `Store` (yeah, still clever 🤓)
+ 2. This model has a list of powerpuffs as attribute, which is an array of Powerpuff
+ 3. You can notice we introduced a new type : `optional`. It's like `maybe` but you can define the default value. Here we want an empty list of powerpuff if the snapshot doesn't have one
  4. The model has also a function to add a new Powerpuff into the list
  5. Instanciate a store without snapshot, you get a Store with an empty list of Powerpuff 🎉
- 6. Instanciate some powerpuffs using the store instance and its list of Powerpuff is filled ✨
+ 6. Instanciate some powerpuffs using the store action `addpowerpuff` on the store instance and its list of Powerpuff is filled ✨
 
 
 ### References & Identifiers
