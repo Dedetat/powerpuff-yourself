@@ -34,7 +34,11 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
     * [afterCreate](#37---aftercreate)
  - [Nested models](#nested-models)
  - [References and identifiers](#references--identifiers)
+    * [Creating a reference](#39---creating-a-reference)
+    * [Reference an identifier](#40---reference-an-identifier)
  - [Utils](#utils)
+    * [onPatch](#41---onpatch)
+    * [onSnapshot](#42---onsnapshot)
 
 ### Model
 > This is about creating our first model
