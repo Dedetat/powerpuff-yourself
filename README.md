@@ -113,7 +113,7 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
  3. You can notice we introduced a new type : `optional`. It's like `maybe` but you can define the default value. Here we want an empty list of powerpuff if the snapshot doesn't have one
  4. The model has also a function to add a new Powerpuff into the list
  5. Instanciate a store without snapshot, you get a Store with an empty list of Powerpuff 🎉
- 6. Instanciate some powerpuffs using the store action `addpowerpuff` on the store instance and its list of Powerpuff is filled ✨
+ 6. Instanciate some powerpuffs using the store action `addPowerpuff` on the store instance and its list of Powerpuff is filled ✨
 
 
 ### References & Identifiers
