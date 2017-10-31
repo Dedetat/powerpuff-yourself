@@ -142,10 +142,11 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
 #### [#40](https://github.com/Dedetat/pimp-my-powerpuff/pull/40/files) - Reference an identifier
 
 ### Utils
-> Maybe there is some debugging tools we could use?
+> We are sick of console.log everywhere, maybe mobx-state-tree can help us ? Yes it can! 😎
+> Let's see some debugging tools it provides
+
 #### [#41](https://github.com/Dedetat/pimp-my-powerpuff/pull/41/files) - onPatch
-> We are sick of `console.log` everywhere, maybe **mobx-state-tree** can help us ?
- 1. Yes it can! 😎
+> How can we track each changes done on our store
  2. We import `onPatch` from **mobx-state-tree**: it allows us to listen to all patches applied to our store. Here we use it to simply print these patches
  3. We remove all the `console.log` and add the `onPatch` listener to our `store` instance, right after we created it
  4. Now as we run the demo and we see patches applied to the `store` printed to the console
