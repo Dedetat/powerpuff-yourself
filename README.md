@@ -2,7 +2,7 @@
   <img src="https://github.com/mobxjs/mobx-state-tree/blob/master/docs/logo.png" height="100" />
 </p>
 <p align="center">
-  <img src="https://i.imgur.com/9Sf6Klx.png" height="300" />
+  <img src="https://i.imgur.com/ZTqMAE2.png" height="300" />
 </p>
 
 # Pimp my Powerpuff
