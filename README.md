@@ -186,4 +186,4 @@ Welcome to our source speech repository about [mobx-state-tree](https://github.c
 
 ---
 
-If you like this demonstrations/livecoding, you can tweet about it! - [@MilletDelphine](https://twitter.com/MilletDelphine) and [@fabienjuif](https://twitter.com/fabienjuif)
+If you like this demonstration/livecoding, you can tweet about it! - [@MilletDelphine](https://twitter.com/MilletDelphine) and [@fabienjuif](https://twitter.com/fabienjuif)
